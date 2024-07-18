@@ -1,1 +1,5 @@
 build/
+mipsel-linux-musl-cross/
+backup_old_firmware/
+tools/src/
+tools/opt/
