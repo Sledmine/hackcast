@@ -60,7 +60,10 @@ CFLAGS=$CFLAGS \
 CXXFLAGS=$CXXFLAGS \
 CROSS_PREFIX=mipsel-linux- \
 ./configure \
---prefix=/opt --host=mipsel-linux
+--enable-static \
+--prefix=/opt \
+--host=mipsel-linux \
+--with-zlib=$DEST/lib
 
 $MAKE
 make install DESTDIR=$BASE

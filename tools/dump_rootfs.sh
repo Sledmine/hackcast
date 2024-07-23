@@ -1,6 +1,10 @@
 #!/bin/bash
 
+############### dump rootfs
 #dd count=8388608 skip=1114112 ibs=1 of=rootfs if=
+
+############### patch old fs with new fs
+#dd of=custom.firmware bs=1 seek=1114112 count=7274496 conv=notrunc < customfs
 
 OFFSETS=$(xxd rootfs | grep "1f8b 0804 0000 0000 000b" | awk -F ':' '{ print $1 }' )
 DEC_OFFSETS=$(echo -e "$OFFSETS" | while read i; do echo $((16#$i)); done)
