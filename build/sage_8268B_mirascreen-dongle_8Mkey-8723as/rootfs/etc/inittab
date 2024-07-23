@@ -5,5 +5,5 @@
 ttyS0::askfirst:/bin/sh
 ::ctrlaltdel:/sbin/reboot
 ::shutdown:/bin/umount ar
-::shutdown:/bin/mount / o remount,rw
+::shutdown:/bin/mount / o remount,ro
 
